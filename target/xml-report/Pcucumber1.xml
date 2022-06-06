@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="0.241">
-    <testcase classname="US1001 amazon arama" name="TC01 amazon nutella arama" time="0.033">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici amazon sayfasina gider.......................................undefined
-And nutella icin arama yapar................................................skipped
-Then sonucun nutella icerdigini test eder...................................skipped
-And sayfayi kapatir.........................................................skipped
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.308">
+    <testcase classname="US1003 Kullanici Parametre Kullanarak Arama Yapar" name="TC06 kullanici parametre ile amazonda arama yapar" time="0.066">
+        <system-out>
+            <![CDATA[Given kullanici amazon anasayfasinda........................................passed
+And kullanici "Java" icin arama yapar.......................................passed
+And sonuclarin "Java" icerdigini test eder..................................passed
+Then sayfayi kapatir........................................................passed
 ]]>
-        </failure>
-    </testcase>
-    <testcase classname="US1001 amazon arama" name="TC02 amazon java arama" time="0.004">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici amazon sayfasina gider.......................................undefined
-And java icin arama yapar...................................................skipped
-Then sonucun java icerdigini test eder......................................skipped
-And sayfayi kapatir.........................................................skipped
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="US1001 amazon arama" name="TC03 amazon ipad arama" time="0.012">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici amazon sayfasina gider.......................................undefined
-And ipad icin arama yapar...................................................skipped
-Then sonucun ipad icerdigini test eder......................................skipped
-And sayfayi kapatir.........................................................skipped
-]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>
