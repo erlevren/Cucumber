@@ -10,17 +10,18 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 public class Driver {
-    private Driver(){
+    private Driver() {
 
     }
+
     static WebDriver driver;
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
 
-        if (driver==null) { //driver'a deger atanmamissa bir kere if calistiktan sonra tekrar yeni pencere acmamasi
+        if (driver == null) { //driver'a deger atanmamissa bir kere if calistiktan sonra tekrar yeni pencere acmamasi
             // icin ikinci driver calisacagi zaman if'e deger atandigi icin if calismaz direk
             //return den driver ayni pencerede calisir
-            switch (ConfigReader.getProperty("browser")){
+            switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
@@ -47,10 +48,19 @@ public class Driver {
         }
         return driver;
     }
-    public static void closeDriver(){
-        if (driver!=null) { // driver'a deger atanmissa
+
+    public static void closeDriver() {
+        if (driver != null) { // driver'a deger atanmissa
             driver.close();
-            driver=null;
+            driver = null;
+        }
+
+    }
+
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
         }
     }
 }
