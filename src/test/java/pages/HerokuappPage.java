@@ -15,7 +15,7 @@ public class HerokuappPage {
     public WebElement addElement;
     @FindBy (xpath = "//button[@class='added-manually']")
     public WebElement deleteButton;
-    @FindBy (id="elements")
-    public WebElement delete;
+    @FindBy (xpath = "//button[@class='added-manually']")
+    public List<WebElement> deleteList;
 
 }

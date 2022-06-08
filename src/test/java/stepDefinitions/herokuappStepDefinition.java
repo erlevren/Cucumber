@@ -33,6 +33,6 @@ public class herokuappStepDefinition {
     }
     @Then("Delete butonunun gorunmedigini test eder")
     public void delete_butonunun_gorunmedigini_test_eder() {
-        Assert.assertFalse(Boolean.parseBoolean(heroku.delete.getAccessibleName()));
+        Assert.assertTrue(heroku.deleteList.isEmpty());
     }
 }
