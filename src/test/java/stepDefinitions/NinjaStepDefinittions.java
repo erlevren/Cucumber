@@ -2,8 +2,10 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+
 import pages.NinjaPage;
 import utilities.ConfigReader;
 import utilities.Driver;

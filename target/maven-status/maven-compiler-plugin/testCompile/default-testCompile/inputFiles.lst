@@ -1,7 +1,10 @@
 C:\javademos\Cucumber\src\test\java\pages\HerokuappPage.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\AmazonStepDefinitions.java
+C:\javademos\Cucumber\src\test\java\stepDefinitions\AutomationStepDefinition.java
+C:\javademos\Cucumber\src\test\java\pages\AutomationPage.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\HMCStepDefinitions.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\NinjaStepDefinittions.java
+C:\javademos\Cucumber\src\test\java\runners\TestRunner2.java
 C:\javademos\Cucumber\src\test\java\utilities\Driver.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\WebDriverStepDefinition.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\herokuappStepDefinition.java

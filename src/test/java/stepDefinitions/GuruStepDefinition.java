@@ -12,10 +12,12 @@ public class GuruStepDefinition {
     GuruPage guruPage = new GuruPage();
     @And("kullanıcı {string} sutunundaki tum degerleri yazdirir")
     public void kullanıcıSutunundakiTumDegerleriYazdirir(String istenensutun) {
+        guruPage.baslikListesi.forEach(t-> System.out.println(t.getText()));
+        /*
         List<WebElement> tabloBaslkListesi = guruPage.baslikListesi;
         //listemiz WebElementlerden olusuyor
         // dolasıyla bu Webelementleden hangisi istenen sutun başlıgını tasıyor bilemeyiz
-        int istenenBaslıkIndexi = -3; // indextekinin nearif olma ihitmali yok, eger bulduysa -3 değildir.
+        int istenenBaslıkIndexi = -3; // indextekinin negatif olma ihtimali yok, eger bulduysa -3 değildir.
         for (int i = 0; i < tabloBaslkListesi.size(); i++) {
             if (tabloBaslkListesi.get(i).getText().equals(istenensutun)) {
                 istenenBaslıkIndexi = i+1;
@@ -33,5 +35,7 @@ public class GuruStepDefinition {
         } else { // baslık bulunamadı ise;
             System.out.println("istenen baslık bulunmadı");
         }
+
+         */
     }
 }

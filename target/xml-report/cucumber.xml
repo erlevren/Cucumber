@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.732">
-    <testcase classname="US1003 Kullanici Parametre Kullanarak Arama Yapar" name="TC06 kullanici parametre ile amazonda arama yapar" time="15.507">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="66.737">
+    <testcase classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" name="TC03 kullanici amazonda iphone aratir" time="21.219">
+        <system-out>
+            <![CDATA[When kullanici amazon anasayfasinda.........................................passed
+And kullanici iphone icin arama yapar.......................................passed
+Then sonuclarin iphone icerdigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1003 Kullanici Parametre Kullanarak Arama Yapar" name="TC06 kullanici parametre ile amazonda arama yapar" time="17.541">
         <system-out>
             <![CDATA[Given kullanici amazon anasayfasinda........................................passed
 And kullanici "Java" icin arama yapar.......................................passed
 And sonuclarin "Java" icerdigini test eder..................................passed
 Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1010 herokuapp Delete testi" name="TC15 herokuapp'dan delete butonu calismali" time="27.477">
+        <system-out>
+            <![CDATA[Given kullanici "herokuappUrl" sayfasina gider..............................passed
+And add element butonuna basar..............................................passed
+And kullanici 2 saniye bekler...............................................passed
+Then Delete butonu gorunur oluncaya kadar bekler............................passed
+And Delete butonunun gorunur oldugunu test eder.............................passed
+And kullanici 2 saniye bekler...............................................passed
+Then Delete butonuna basar..................................................passed
+And Delete butonunun gorunmedigini test eder................................passed
+And kullanici 2 saniye bekler...............................................passed
+And sayfayi kapatir.........................................................passed
 ]]>
         </system-out>
     </testcase>

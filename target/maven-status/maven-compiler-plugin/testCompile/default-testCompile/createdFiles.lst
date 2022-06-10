@@ -2,6 +2,8 @@ stepDefinitions\AmazonStepDefinitions.class
 stepDefinitions\DataTablesStepDefinitions.class
 pages\GuruPage.class
 pages\NinjaPage.class
+stepDefinitions\AutomationStepDefinition.class
+pages\AutomationPage.class
 stepDefinitions\herokuappStepDefinition.class
 pages\HerokuappPage.class
 pages\HotelMyCampPage.class
@@ -12,6 +14,7 @@ utilities\Driver.class
 stepDefinitions\NinjaStepDefinittions.class
 stepDefinitions\Hooks.class
 stepDefinitions\WebDriverStepDefinition.class
+runners\TestRunner2.class
 pages\DataTablesPage.class
 utilities\ConfigReader.class
 stepDefinitions\HMCStepDefinitions.class

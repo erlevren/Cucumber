@@ -1,7 +1,7 @@
 
 Feature: US1003 kullanici istedigi kelime icin arama yapip, sonucu test eder
 
-  @config
+  @config @pr2
   Scenario: TC07 istenen kelimenin oldugunu test etme
 
     Given kullanici "amazonUrl" sayfasina gider

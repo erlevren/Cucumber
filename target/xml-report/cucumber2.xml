@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="52.449">
+    <testcase classname="US1002 Kullanici Ortak Adimlari Background ile calistirir" name="T05 amazon java aramasi" time="22.673">
+        <system-out>
+            <![CDATA[Given kullanici amazon anasayfasinda........................................passed
+And kullanici Java icin arama yapar.........................................passed
+Then sonuclarin Java icerdigini test eder...................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1003 kullanici istedigi kelime icin arama yapip, sonucu test eder" name="TC07 istenen kelimenin oldugunu test etme" time="19.197">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" sayfasina gider.................................passed
+Then kullanici 3 saniye bekler..............................................passed
+* kullanici "Java" icin arama yapar.........................................passed
+And url'nin "amazon" icerdigini test eder...................................passed
+And sayfayi kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1012 web tablosundaki istenen sutunu yazdırma" name="TC001 kullanıcı sutun baslıgı ile liste alabilmeli" time="10.113">
+        <system-out>
+            <![CDATA[Given kullanici "guruUrl" sayfasina gider...................................passed
+And kullanıcı "Company" sutunundaki tum degerleri yazdirir..................passed
+And kullanici 3 saniye bekler...............................................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

@@ -1,5 +1,5 @@
 Feature: US1003 Kullanici Parametre Kullanarak Arama Yapar
-  @parametre
+  @parametre @sirali @pr1
   Scenario: TC06 kullanici parametre ile amazonda arama yapar
     Given kullanici amazon anasayfasinda
     And kullanici "Java" icin arama yapar
