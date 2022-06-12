@@ -1,41 +1,39 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.And;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.GuruPage;
-import utilities.Driver;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class GuruStepDefinition {
-    GuruPage guruPage = new GuruPage();
-    @And("kullanıcı {string} sutunundaki tum degerleri yazdirir")
-    public void kullanıcıSutunundakiTumDegerleriYazdirir(String istenensutun) {
-        guruPage.baslikListesi.forEach(t-> System.out.println(t.getText()));
-        /*
-        List<WebElement> tabloBaslkListesi = guruPage.baslikListesi;
-        //listemiz WebElementlerden olusuyor
-        // dolasıyla bu Webelementleden hangisi istenen sutun başlıgını tasıyor bilemeyiz
-        int istenenBaslıkIndexi = -3; // indextekinin negatif olma ihtimali yok, eger bulduysa -3 değildir.
-        for (int i = 0; i < tabloBaslkListesi.size(); i++) {
-            if (tabloBaslkListesi.get(i).getText().equals(istenensutun)) {
-                istenenBaslıkIndexi = i+1;
-                break;
-            }
-        }
-        // for loop ile tüm sutun baslıklarını bana verilen istenen sutun değeri ile karşılastırdım
-        // loop bittiğinde baslıgın bulunup bulunmadıgını kontrol etmek ve
-        // bulundu ise yoluma devam etmek istiyorum
-        if (istenenBaslıkIndexi != -3) { // -3 e eşit değilse baslık bulundu.
-            List<WebElement> istenenSutundakiElementler = Driver.getDriver().findElements(By.xpath("//tbody//tr//td[" + istenenBaslıkIndexi + "]"));
-            for (WebElement each : istenenSutundakiElementler) {
-                System.out.println(each.getText());
-            }
-        } else { // baslık bulunamadı ise;
-            System.out.println("istenen baslık bulunmadı");
-        }
+    GuruPage demoGuruPage=new GuruPage();
 
-         */
+    @And("kullanici {string} sutunundaki tum degerleri yazdirir")
+    public void kullaniciSutunundakiTumDegerleriYazdirir(String istenenBaslik) {
+        List<List<WebElement>> sutunBaslikListesi=new ArrayList<>();
+        sutunBaslikListesi.add(demoGuruPage.sutunBaslikList1);
+        sutunBaslikListesi.add(demoGuruPage.sutunBaslikList2);
+        sutunBaslikListesi.add(demoGuruPage.sutunBaslikList3);
+        sutunBaslikListesi.add(demoGuruPage.sutunBaslikList4);
+        sutunBaslikListesi.add(demoGuruPage.sutunBaslikList5);
+
+        switch (istenenBaslik){
+            case "Company":
+                sutunBaslikListesi.get(0).forEach(t-> System.out.println(t.getText()));
+                break;
+            case "Group":
+                sutunBaslikListesi.get(1).forEach(t-> System.out.println(t.getText()));
+                break;
+            case "Prev Close (Rs)":
+                sutunBaslikListesi.get(2).forEach(t-> System.out.println(t.getText()));
+                break;
+            case "Current Price (Rs)":
+                sutunBaslikListesi.get(3).forEach(t-> System.out.println(t.getText()));
+                break;
+            case "% Change":
+                sutunBaslikListesi.get(4).forEach(t-> System.out.println(t.getText()));
+                break;
+        }
     }
 }

@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -13,7 +14,6 @@ public class Driver {
     private Driver() {
 
     }
-
     static WebDriver driver;
 
     public static WebDriver getDriver() {
@@ -26,9 +26,9 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
-                case "safari":
-                    WebDriverManager.safaridriver().setup();
-                    driver = new SafariDriver();
+                case "edge":
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
@@ -54,9 +54,7 @@ public class Driver {
             driver.close();
             driver = null;
         }
-
     }
-
     public static void quitDriver() {
         if (driver != null) {
             driver.quit();

@@ -6,6 +6,7 @@ C:\javademos\Cucumber\src\test\java\stepDefinitions\HMCStepDefinitions.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\NinjaStepDefinittions.java
 C:\javademos\Cucumber\src\test\java\runners\TestRunner2.java
 C:\javademos\Cucumber\src\test\java\utilities\Driver.java
+C:\javademos\Cucumber\src\test\java\pages\GittiGidiyorPage.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\WebDriverStepDefinition.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\herokuappStepDefinition.java
 C:\javademos\Cucumber\src\test\java\pages\WebDriverPage.java
@@ -15,7 +16,9 @@ C:\javademos\Cucumber\src\test\java\pages\NinjaPage.java
 C:\javademos\Cucumber\src\test\java\pages\DataTablesPage.java
 C:\javademos\Cucumber\src\test\java\pages\GuruPage.java
 C:\javademos\Cucumber\src\test\java\runners\TestRunner.java
+C:\javademos\Cucumber\src\test\java\stepDefinitions\ExcelStepDefinition.java
 C:\javademos\Cucumber\src\test\java\utilities\ConfigReader.java
 C:\javademos\Cucumber\src\test\java\pages\HotelMyCampPage.java
 C:\javademos\Cucumber\src\test\java\stepDefinitions\DataTablesStepDefinitions.java
 C:\javademos\Cucumber\src\test\java\pages\AmazonPage.java
+C:\javademos\Cucumber\src\test\java\stepDefinitions\GittiGidiyorStepDefinition.java

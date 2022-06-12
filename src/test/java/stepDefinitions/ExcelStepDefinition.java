@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class ExcelStepDefinition {
     Workbook workbook;
+
     @Given("kullanici excel dosyasini kullanilabilir hale getirir")
     public void kullanici_excel_dosyasini_kullanilabilir_hale_getirir() throws IOException {
         String dosyaYolu = "src/test/resources/ulkeler.xlsx";
@@ -18,39 +19,52 @@ public class ExcelStepDefinition {
         workbook = WorkbookFactory.create(fis);
 
     }
+
     @Then("{int}. satirdaki {int}. hucreyi yazdirir")
     public void satirdaki_hucreyi_yazdirir(Integer satir, Integer sutun) {
         String istenenHucreYazisi = workbook
                 .getSheet("Sayfa1")
-                .getRow(satir-1)
-                .getCell(sutun-1)
+                .getRow(satir - 1)
+                .getCell(sutun - 1)
                 .toString();
-        System.out.println(satir+".satir "+sutun+".sutundaki deger: "+istenenHucreYazisi);
+        System.out.println(satir + ".satir " + sutun + ".sutundaki deger: " + istenenHucreYazisi);
 
     }
+
     @Then("baskenti Jakarta olan ulke ismini yazdirir")
     public void baskenti_jakarta_olan_ulke_ismini_yazdirir() {
         //for loop ile tum satirlari kontrol etmem gerekiyor
         //Bunun icinde satir sayisina ihtiyacim var
         int satirSayisi = workbook.getSheet("Sayfa1").getLastRowNum();
         for (int i = 0; i <= satirSayisi; i++) {
-            if (workbook.getSheet("Sayfa1").getRow(i).getCell(1).toString().equals("Jakarta")){
+            if (workbook.getSheet("Sayfa1").getRow(i).getCell(1).toString().equals("Jakarta")) {
                 System.out.println("Baskenti Jakarta olan ulke : "
-                        +workbook.getSheet("Sayfa1").getRow(i).getCell(0));
+                        + workbook.getSheet("Sayfa1").getRow(i).getCell(0));
             }
         }
     }
+
     @Then("Ulke sayisinin {int} oldugunu test eder")
     public void ulke_sayisinin_oldugunu_test_eder(Integer ulkeSayisi) {
         int actualUlkeSayisi = workbook.getSheet("Sayfa1").getLastRowNum();
-        System.out.println("Ulke sayisi = "+actualUlkeSayisi);
-        Assert.assertTrue(ulkeSayisi==actualUlkeSayisi);
+        System.out.println("Ulke sayisi = " + actualUlkeSayisi);
+        Assert.assertTrue(ulkeSayisi == actualUlkeSayisi);
     }
+
     @Then("Fiziki olarak kullanilan satir sayisinin {int} oldugunu test eder")
     public void fiziki_olarak_kullanilan_satir_sayisinin_oldugunu_test_eder(Integer fizikiKullanilanSatir) {
         int actualFizikiSatir = workbook.getSheet("Sayfa1").getPhysicalNumberOfRows();
-        System.out.println("Fiziki satir sayisi + "+actualFizikiSatir);
-        Assert.assertTrue(fizikiKullanilanSatir==actualFizikiSatir);
+        System.out.println("Fiziki satir sayisi + " + actualFizikiSatir);
+        Assert.assertTrue(fizikiKullanilanSatir == actualFizikiSatir);
     }
 
+    @Given("kullanici baslik satirinda ilk bos hucreye yeni bir hucre olusturur")
+    public void kullaniciBaslikSatirindaIlkBosHucreyeYeniBirHucreOlusturur() throws IOException {
+        String dosyaYolu = "src/test/resources/ulkeler.xlsx";
+        FileInputStream fis = new FileInputStream(dosyaYolu);
+        Workbook workbook = WorkbookFactory.create(fis);
+
+        workbook.getSheet("Sayfa1").createRow(0).createCell(4).setCellValue("Ulke Nufusu");
+    }
 }
+

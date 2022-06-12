@@ -1,10 +1,20 @@
-# http://demo.guru99.com/test/web-table-element.php sayfasina gidelim
-# Cucumber framework’de US1012_Guru_Web_Tables altinda
-Feature: US1012 web tablosundaki istenen sutunu yazdırma
-  @guru @pr2
-  Scenario: TC001 kullanıcı sutun baslıgı ile liste alabilmeli
-
+​
+#1.    http://demo.guru99.com/test/web-table-element.php sayfasina gidelim
+#2.   Cucumber framework’de US1012_Guru_Web_Tables altinda
+#Scenario : TC_18_kullanici_sutun_basligi_ile_liste_alabilmeli   olusturun ve
+#asagidaki testi yapin
+#Given user web sayfasinda
+#And “Istenen Baslik”, sutunundaki tum degerleri yazdirir
+Feature: US1008 kullanici GuruWebTables a gidebilmeli
+  Scenario Outline: TC08 kullanici sutun basligi ile liste alabilmeli
     Given kullanici "guruUrl" sayfasina gider
-    And kullanıcı "Company" sutunundaki tum degerleri yazdirir
-    And kullanici 3 saniye bekler
-    Then sayfayi kapatir
+    And kullanici "<istenenBaslik>" sutunundaki tum degerleri yazdirir
+    And sayfayi kapatir
+
+    Examples:
+      |istenenBaslik     |
+      |Company           |
+      |Group             |
+      |Prev Close (Rs)   |
+      |Current Price (Rs)|
+      |% Change          |
